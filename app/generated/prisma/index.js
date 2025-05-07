@@ -194,11 +194,12 @@ const config = {
     "db"
   ],
   "activeProvider": "mongodb",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "mongodb://localhost:27017/My-Prefect-Rental"
+        "value": null
       }
     }
   },

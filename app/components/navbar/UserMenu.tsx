@@ -9,12 +9,11 @@ import useRegisterModal from "@/app/hooks/useRegisterModal";
 const UserMenu = () => {
   //call register modal
   const registerModal = useRegisterModal();
-  //dispay the dropdown toggle
-  const [isOpen, setIsOpne] = useState(false);
+  const [isOpen, setIsOpn] = useState(false);
 
   //dispay the dropdown toggle
   const toggleOpen = useCallback(() => {
-    setIsOpne((value) => !value);
+    setIsOpn((value) => !value);
   }, []);
 
   return (
@@ -37,11 +36,11 @@ const UserMenu = () => {
         </div>
       </div>
       {isOpen && (
-        <div className=" absolute  rounded-xl shadow-md w-[40vw] md:w-3/4 bg-white overflow-hidden right-0 top-12 text-sm ">
+        <div className=" absolute  rounded-xl shadow-md w-auto md:w-3/4 bg-white overflow-hidden right-0 top-12 text-sm ">
           <div className=" flex flex-col cursor-pointer ">
             <>
               <MenuItem onClick={() => {}} label="Login" />
-              <MenuItem onClick={registerModal.isOpen as any} label="Sign up" />
+              <MenuItem onClick={registerModal.onOpen} label="Sign up" />
             </>
           </div>
         </div>

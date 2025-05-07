@@ -1,4 +1,5 @@
 "use clinet";
+
 import React from "react";
 import Container from "../Container";
 import Logo from "./Logo";
