@@ -32,7 +32,6 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onChange, value }) => {
         cropping: false, // or true if you want to allow cropping
         resourceType: "image",
       }}
-      // className="cursor-pointer hover:opacity-75 transition"
     >
       {({ open }) => {
         return (

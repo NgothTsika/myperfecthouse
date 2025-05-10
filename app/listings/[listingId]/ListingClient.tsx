@@ -5,7 +5,6 @@ import axios from "axios";
 import { differenceInCalendarDays, eachDayOfInterval } from "date-fns";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Reservation } from "@/app/generated/prisma";
 
 import { SafeListings, safeReservation, SafeUser } from "@/app/types";
 import Container from "@/app/components/Container";
@@ -65,7 +64,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
     setIsLoading(true);
 
     axios
-      .post("/api//reservations", {
+      .post("/api/reservations", {
         totalPrice,
         startDate: dateRange.startDate,
         endDate: dateRange.endDate,
